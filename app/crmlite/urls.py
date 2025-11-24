@@ -4,6 +4,7 @@ from . import views
 
 router = SimpleRouter()
 router.register(r'companies', views.CompanyView, basename='company')
+router.register(r'storages',views.StorageView, basename='storage')
 
 urlpatterns = router.urls
 # from django.urls import path

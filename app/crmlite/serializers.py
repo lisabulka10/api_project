@@ -9,7 +9,9 @@ class CompanySerializer(serializers.ModelSerializer):
 
 
 class StorageSerializer(serializers.ModelSerializer):
+    company = CompanySerializer(read_only=True)
+
     class Meta:
         model = Storage
-        fields = ['address', 'company_id']
-
+        fields = ['id', 'address', 'company']
+        read_only_fields = ['company']
