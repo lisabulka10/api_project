@@ -8,4 +8,4 @@ class Company(models.Model):
 
 class Storage(models.Model):
     address = models.CharField()
-    company_id = models.OneToOneField(Company, on_delete=models.CASCADE, related_name='storages')
+    company_id = models.OneToOneField(Company, on_delete=models.CASCADE, related_name='storage')
