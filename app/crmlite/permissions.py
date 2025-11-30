@@ -8,3 +8,12 @@ class IsCompanyOwner(BasePermission):
             return True
         else:
             return False
+
+
+class IsCompanyStaff(BasePermission):
+    def has_object_permission(self, request, view, obj):
+        user = request.user
+        if user.company == obj.company:
+            return True
+        else:
+            return False
