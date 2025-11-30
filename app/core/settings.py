@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'authenticate.apps.AuthenticateConfig',
+    'crmlite',
     'rest_framework',
     'rest_framework_simplejwt',
     'drf_spectacular',
